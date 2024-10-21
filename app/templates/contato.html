@@ -1,6 +1,55 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+   <header>
+        <h1>Entre em Contato</h1>
+   </header>
 
-  <h1>todos os contatos</h1>
+<h2 class="text-center mt-5">Deixe sua duvida ou critica!</h2>
+    <div class="row">
+        <div class="individual">
+            <div class="card mb-4 shadow-sm">
+                <div class="caixa">
+                    <h5 class="card-title">informe seu nome</h5>
+                    <p class="card-text">iforme seu nome para que possamos saber quem esta com duvidas.</p>
+                    <div class="nome2"><label for="nome">Nome:</label></div>
+                    <input type="text" id="nome" required>
+                </div>
+            </div>
+        </div>
+        <div class="atualizar">
+            <div class="card mb-4 shadow-sm">
+                <div class="caixa">
+                    <h5 class="card-title">informe seu email</h5>
+                    <p class="card-text">informe seu email para que possamos lhe atualizar com mensagens.</p>
+                    <div class="email"><label for="email">Email:</label></div>
+                    <input type="email" id="email" required>
+                </div>
+            </div>
+        </div>
+        <div class="excluir">
+            <div class="card mb-4 shadow-sm">
+                <div class="caixa">
+                    <h5 class="card-title">escreva sua duvida</h5>
+                    <p class="card-text">informe sua duvida, critica, ou avaliação para que possamos melhorar!.</p>
+                    <div class="mensagem"><label for="mensagem">Mensagem:</label></div>
+                    <textarea id="mensagem" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <main>
+        <section>
+                <h2>Informações de Contato</h2>
+                <p>Email: contato@empresa.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Endereço: Rua Exemplo, 123, São Paulo, SP</p>
+        </section>
+    </main>
+
+     <footer>
+        <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+     </footer>
 
 {% endblock %}

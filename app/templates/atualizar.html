@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Usuário</title>
-</head>
+{% extends 'base.html' %}
+{% block conteudo %}
+
+
 <body>
     <h2>Atualizar Dados do Usuário</h2>
-    <form action="/atualizar" method="POST">
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" placeholder="Digite o CPF" required><br><br>
+    <div class="atualizar">
+        <div class="card mb-4 shadow-sm">
+            <div class="card">
+                <div class="tituloatualizar"><h5 class="card-title">Atualizar Informações</h5></div>
+                <p class="card-text">Mantenha suas informações sempre atualizadas facilmente.</p>
+                    <div class="textos">
+                        <form action="/atualizar" method="POST">
+                        <label for="cpf">CPF:</label>
+                        <div class="cpf"><input type="text" id="cpf" name="cpf" placeholder="Digite o CPF" required><br><br></div>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o novo nome" required><br><br>
+                        <label for="nome">Nome:</label>
+                        <div class="nome"><input type="text" id="nome" name="nome" placeholder="Digite o novo nome" required><br><br></div>
 
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" placeholder="Digite o novo telefone" required><br><br>
+                        <label for="telefone">Telefone:</label>
+                        <div class="telefone"><input type="text" id="telefone" name="telefone" placeholder="Digite o novo telefone" required><br><br></div>
 
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" placeholder="Digite o novo endereço" required><br><br>
+                        <label for="endereco">Endereço:</label>
+                        <div class="endereco"><input type="text" id="endereco" name="endereco" placeholder="Digite o novo endereço" required><br><br></div>
+                    </form>
+                        </div>
+                        <div class="cadastrob"><button type="submit"><a href="/atualizar">Atualizar</a></button></div>
+            </div>
+        </div>
+    </div>
 
-        <button type="submit">Atualizar</button>
-    </form>
 </body>
-</html>
+{% endblock %}

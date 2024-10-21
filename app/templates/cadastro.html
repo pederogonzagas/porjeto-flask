@@ -1,26 +1,63 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-  <form action="/cadastrarUsuario" method="POST">
-    <label> CPF: </label>
-    <input type="text" name="cpf" id="cpf"/><br><br>
+    <div class="container mt-5">
+        <div class="cadastromsm">
+            <form action="cadastrarUsuario" method="POST">
+                <h2 class="fjalla-one-regular">CADASTRO</h2>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                </div>
+                <div class="form-group2">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+                </div>
+                    <div class="cadastrar"><button type="submit">Cadastrar</button></div>
+            </form>
+        </div>
+    </div>
 
-    <label> nome: </label>
-    <input type="text" name="nome" id="nome"/><br><br>
-
-    <label> telefone: </label>
-    <input type="number" name="telefone" id="telefone"/><br><br>
-
-    <label> endereço: </label>
-    <input type="text" name="endereco" id="endereco"/><br><br>
-
-    <button>cadastrar</button>
-  </form>
-
-  <br>
-  <a href="/listar">consultar tudo</a><br><br>
-  <a href="listarIndividual">consultar individual</a><br><br>
-  <a href="/atualizar">atualizar</a><br><br>
-  <a href="/excluir">excluir</a>
+        <h2 class="text-center mt-5">Recursos</h2>
+        <div class="row">
+            <div class="individual">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card">
+                        <h5 class="card-title">conultar individualmente</h5>
+                        <p class="card-text">consulte as informações que quiser a hora que quiser.</p>
+                        <div class="cadastrob"><button><a href="/listarIndividual">consultar</a></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="atualizar">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card">
+                        <h5 class="card-title">Atualizar Informações</h5>
+                        <p class="card-text">Mantenha suas informações sempre atualizadas facilmente.</p>
+                        <div class="cadastrob"><button><a href="/atualizar">atualizar</a></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="excluir">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card">
+                        <h5 class="card-title">Excluir</h5>
+                        <p class="card-text">Exclua suas informações facilmente.</p>
+                        <div class="cadastrob"><button><a href="/excluir">Excluir Contato</a></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
+</form>
+
